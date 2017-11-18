@@ -1,4 +1,5 @@
 {
-  "host": "gempathy-api-app.feathersjs.com",
+  "host": "gempathy-api.herokuapp.com",
   "port": "PORT"
 }
+   
