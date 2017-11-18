@@ -7,7 +7,7 @@ const makeRequest = request.defaults({
     json: true
 });
 
-const todoService = {
+const getAllCompanies = {
     find(params) {
         return makeRequest(`/`);
     }
@@ -18,5 +18,5 @@ module.exports = function () {
     // in Express the order matters
     const app = this; // eslint-disable-line no-unused-vars
 
-    app.use('/todos', todoService);
+    app.use('/companies', getAllCompanies);
 };

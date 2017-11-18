@@ -1,4 +1,4 @@
-const customers = require('./customers/customers.service.js');
+const customers = require('./companies/companies.service.js');
 
 module.exports = function () {
     const app = this; // eslint-disable-line no-unused-vars
