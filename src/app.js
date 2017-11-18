@@ -20,6 +20,7 @@ const app = feathers();
 
 // Load app configuration
 app.configure(configuration());
+
 // Enable CORS, security, compression, favicon and body parsing
 app.use(cors());
 app.use(helmet());
