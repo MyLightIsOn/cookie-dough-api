@@ -17,16 +17,16 @@ module.exports = function () {
     testConfig[apiKeyHeader] = apiKey;
 
     const makeRequest = request.defaults({
-        baseUrl: baseURL + 'v1/objects/object_1/records',
+        baseUrl: baseURL + 'v1/objects/object_3/records',
         headers: testConfig,
         json: true
     });
 
-    const getAllCompanies = {
+    const getAllReviews = {
         find(params) {
             return makeRequest(`/`);
         }
     };
 
-    app.use('/companies', getAllCompanies);
+    app.use('/reviews', getAllReviews);
 };
