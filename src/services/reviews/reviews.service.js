@@ -23,8 +23,8 @@ module.exports = function () {
     });
 
     const getAllReviews = {
-        find(params) {
-            return makeRequest(`/`);
+        find() {
+            return makeRequest('/');
         }
     };
 
