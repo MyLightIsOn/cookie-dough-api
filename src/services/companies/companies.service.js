@@ -17,7 +17,7 @@ module.exports = function () {
     testConfig[apiKeyHeader] = apiKey;
 
     const makeRequest = request.defaults({
-        baseUrl: baseURL + 'v1/objects/object_1/records',
+        baseUrl: baseURL + 'v1/objects/object_1/records?rows_per_page=1000',
         headers: testConfig,
         json: true
     });
