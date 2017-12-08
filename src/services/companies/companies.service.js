@@ -17,9 +17,12 @@ module.exports = function () {
     testConfig[apiKeyHeader] = apiKey;
 
     const makeRequest = request.defaults({
-        baseUrl: baseURL + 'v1/objects/object_1/records?rows_per_page=1000',
+        baseUrl: baseURL + 'v1/objects/object_1/records',
         headers: testConfig,
-        json: true
+        json: true,
+        qs: {
+            'rows_per_page': '1000'
+        }
     });
 
     const getAllCompanies = {
@@ -30,3 +33,5 @@ module.exports = function () {
 
     app.use('/companies', getAllCompanies);
 };
+
+//?rows_per_page=1000
