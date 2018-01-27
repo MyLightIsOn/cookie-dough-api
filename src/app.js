@@ -36,6 +36,13 @@ app.configure(hooks());
 app.configure(rest());
 app.configure(socketio());
 
+// API config stuff
+app.baseURL = app.get('BASEURL');
+app.apiIDHeader =  app.get('API_ID_HEADER');
+app.apiID =  app.get('API_ID');
+app.apiKeyHeader =  app.get('API_KEY_HEADER');
+app.apiKey =  app.get('API_KEY');
+
 // Configure other middleware (see `middleware/index.js`)
 app.configure(middleware);
 // Set up our services (see `services/index.js`)
