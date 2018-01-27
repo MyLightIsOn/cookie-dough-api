@@ -7,7 +7,7 @@ module.exports = function() {
         create(body) {
             const makeRequest = request.defaults({
                 method: 'POST',
-                url: app.baseUrl + 'v1/applications/' + app.apiID + '/session',
+                url: app.baseURL + 'v1/applications/' + app.apiID + '/session',
                 body: {
                     email: body.email,
                     password: body.password
