@@ -42,6 +42,9 @@ app.apiIDHeader =  app.get('API_ID_HEADER');
 app.apiID =  app.get('API_ID');
 app.apiKeyHeader =  app.get('API_KEY_HEADER');
 app.apiKey =  app.get('API_KEY');
+app.headers = {};
+app.headers[app.apiIDHeader] = app.apiID;
+app.headers[app.apiKeyHeader] = app.apiKey;
 
 // Configure other middleware (see `middleware/index.js`)
 app.configure(middleware);

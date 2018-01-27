@@ -1,17 +1,11 @@
 const request = require('request-promise');
 
 module.exports = function () {
-    // Add your custom middleware here. Remember, that
-    // in Express the order matters
-    const app = this; // eslint-disable-line no-unused-vars
-
-    let headers = {};
-    headers[app.apiIDHeader] = app.apiID;
-    headers[app.apiKeyHeader] = app.apiKey;
+    const app = this;
 
     const makeRequest = request.defaults({
-        baseUrl: this.baseURL + 'v1/objects/object_1/records',
-        headers: headers,
+        baseUrl: app.baseURL + 'v1/objects/object_1/records',
+        headers: app.headers,
         json: true,
         qs: {
             'rows_per_page': '1000'
@@ -26,5 +20,3 @@ module.exports = function () {
 
     app.use('/companies', getAllCompanies);
 };
-
-//?rows_per_page=1000
