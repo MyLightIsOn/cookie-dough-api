@@ -6,8 +6,8 @@ module.exports = function () {
     const app = this; // eslint-disable-line no-unused-vars
 
     let headers = {};
-    headers[app.apiIDHeader] = app.apiIDHeader;
-    headers[app.apiKeyHeader] = app.apiKeyHeader;
+    headers[app.apiIDHeader] = app.apiID;
+    headers[app.apiKeyHeader] = app.apiKey;
 
     const makeRequest = request.defaults({
         baseUrl: this.baseURL + 'v1/objects/object_1/records',
